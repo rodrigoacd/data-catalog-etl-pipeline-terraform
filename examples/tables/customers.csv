@@ -1,0 +1,6 @@
+customer_id,name,email,country,signup_date,active
+1001,John Doe,john@example.com,USA,2023-01-15,true
+1002,Maria Garcia,maria@example.com,Spain,2023-02-20,true
+1003,James Smith,james@example.com,UK,2023-03-10,false
+1004,Ana Silva,ana@example.com,Brazil,2023-04-05,true
+1005,Wei Chen,wei@example.com,China,2023-05-12,true
