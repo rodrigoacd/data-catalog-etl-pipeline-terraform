@@ -403,3 +403,23 @@ def process_csv_to_catalog(cloud_event):
             'error': str(e),
             'file': file_name
         }
+
+
+# Feature: Validación mejorada de CSVs
+def validate_csv_structure(metadata):
+    """Valida estructura del CSV"""
+    errors = []
+    
+    if metadata['row_count'] == 0:
+        errors.append("CSV está vacío")
+    
+    if metadata['column_count'] == 0:
+        errors.append("CSV no tiene columnas")
+    
+    if metadata['file_size'] > 100 * 1024 * 1024:
+        errors.append("CSV excede 100MB")
+    
+    if len(metadata['columns']) > 1000:
+        errors.append("Demasiadas columnas (máx 1000)")
+    
+    return errors
